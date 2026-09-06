@@ -1,0 +1,89 @@
+
+/* Khởi tạo lại bảng để không bị Markdown mặc định làm lệch */
+.custom-table {
+    width: 100%;
+    border-collapse: separate; /* Đổi thành separate để bo góc hoạt động hoàn hảo */
+    border-spacing: 0;
+    margin: 20px 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #FFFFFF; /* Đảm bảo nền bảng luôn màu trắng */
+}
+
+/* Thanh tiêu đề chính (Header) */
+.custom-table th {
+    background-color: #00AFB9 !important; /* Ép nhận màu xanh Teal */
+    color: #FFFFFF !important;
+    text-align: left;
+    padding: 14px 20px;
+    font-weight: 600;
+    border: none;
+}
+
+/* Định dạng các ô dữ liệu */
+.custom-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #EAEAEA;
+    color: #333333 !important;
+    vertical-align: middle;
+}
+
+/* Xóa đường kẻ ở hàng cuối cùng để không bị lỗi bo góc */
+.custom-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hàng xen kẽ (Chẵn) - Màu kem nhạt dịu nhẹ */
+.custom-table tbody tr:nth-of-type(even) {
+    background-color: #FDFCDC !important;
+}
+
+/* Hàng lẻ - Giữ màu trắng tinh tế */
+.custom-table tbody tr:nth-of-type(odd) {
+    background-color: #FFFFFF !important;
+}
+
+/* Hiệu ứng Hover mượt mà - Màu cam đào nhạt */
+.custom-table tbody tr:hover {
+    background-color: #FED9B7 !important;
+    transition: background-color 0.15s ease;
+}
+
+/* Khối mã Code hiển thị mã màu */
+.custom-table code {
+    background-color: #F3F4F6;
+    color: #333333;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+/* Định dạng nhãn trạng thái (Badges) */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Các biến thể màu cho Trạng thái */
+.status-badge.completed {
+    background-color: #F07167; /* Màu san hô */
+    color: #FFFFFF;
+}
+
+.status-badge.active {
+    background-color: #00AFB9; /* Màu xanh Teal */
+    color: #FFFFFF;
+}
+
+.status-badge.pending {
+    background-color: #FED9B7; /* Màu cam đào */
+    color: #5c3a21;
+}
